@@ -26,18 +26,17 @@ const app = initializeApp(firebaseConfig);
 
 export const db = getFirestore();
 
-export const createCourse = (title, description) =>
-    addDoc(collection(db, nameDbCourse), { title, description });
+export const createCourse = (course) =>
+    addDoc(collection(db, nameDbCourse), course);
 
 export const onGetCourses = (callback) =>
     onSnapshot(collection(db, nameDbCourse), callback);
 
+export const deleteCourse = (course) => deleteDoc(doc(db, nameDbCourse, id));
 
-export const deleteCourse = (id) => deleteDoc(doc(db, nameDbCourse, id));
+export const getCourse = (course) => getDoc(doc(db, nameDbCourse, id));
 
-export const getCourse = (id) => getDoc(doc(db, nameDbCourse, id));
-
-export const updateCourse = (id, newFields) =>
-    updateDoc(doc(db, nameDbCourse, id), newFields);
+export const updateCourse = (id, course) =>
+    updateDoc(doc(db, nameDbCourse, id), course);
 
 export const getAllCourse = () => getDocs(collection(db, nameDbCourse));
