@@ -8,7 +8,7 @@ import {
     doc,
     getDoc,
     updateDoc,
-} from "https://www.gstatic.com/firebasejs/9.6.2/firebase-firestore.js";
+} from "https://www.gstatic.com/firebasejs/9.14.0/firebase-firestore.js";
 
 const nameDbCourse = "course";
 const db = getFirestore();
