@@ -5,4 +5,4 @@ import {
     getCourse,
     updateCourse,
     getAllCourse,
-} from "./firebase.js";
+} from "./database/firebase.js";
